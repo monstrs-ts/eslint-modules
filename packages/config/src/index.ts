@@ -6,6 +6,7 @@ const config: TSESLint.FlatConfig.Config = {
   rules: {
     ...love.rules,
     'import/no-duplicates': 'off',
+    '@typescript-eslint/no-magic-numbers': 'off',
   },
   ignores: ['.next', '**/next-env.d.ts', '**/postcss.config.mjs'],
 }
