@@ -1,6 +1,6 @@
 {
   "name": "@monstrs/eslint-config",
-  "version": "0.4.1",
+  "version": "0.5.0",
   "type": "module",
   "exports": {
     "./package.json": "./package.json",
@@ -14,6 +14,8 @@
     "build": "tsc -b"
   },
   "dependencies": {
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "@eslint-react/eslint-plugin": "^1.52.3",
     "@typescript-eslint/eslint-plugin": "^8.35.1",
     "@typescript-eslint/parser": "^8.35.1",
     "@typescript-eslint/utils": "^8.37.0",

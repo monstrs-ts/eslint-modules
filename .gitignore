@@ -56,6 +56,9 @@ next-env.d.ts
 # Temp data folder
 .data
 
+# TypeScript
+tsconfig.tsbuildinfo
+
 # Terraform compiled files
 *.tfstate
 *.tfstate.d

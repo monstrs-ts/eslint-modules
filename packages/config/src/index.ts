@@ -1,7 +1,10 @@
 import type { TSESLint } from '@typescript-eslint/utils'
+
+import eslintReact from '@eslint-react/eslint-plugin'
+import reactHooks from 'eslint-plugin-react-hooks'
 import love from 'eslint-config-love'
 
-const config: TSESLint.FlatConfig.Config = {
+const base: TSESLint.FlatConfig.Config = {
   ...love,
   rules: {
     ...love.rules,
@@ -11,4 +14,17 @@ const config: TSESLint.FlatConfig.Config = {
   ignores: ['.next', '**/next-env.d.ts', '**/postcss.config.mjs'],
 }
 
-export default config
+const react: TSESLint.FlatConfig.Config = {
+  files: ['**/*.{ts,tsx}'],
+  ...eslintReact.configs['recommended-typescript'],
+}
+
+const reacthooks: TSESLint.FlatConfig.Config = {
+  files: ['**/*.{ts,tsx}'],
+  plugins: {
+    'react-hooks': reactHooks,
+  },
+  rules: reactHooks.configs.recommended.rules,
+}
+
+export default [base, react, reacthooks]
